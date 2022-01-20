@@ -7,13 +7,15 @@ export function useDarkmode() {
   );
 
   const toggleDarkmode = useCallback(() => {
+    const classList = document.querySelector('html').classList;
+
     if (currentMode === ColorMode.DARK) {
-      document.querySelector('html').classList.remove(ColorMode.DARK);
-      document.querySelector('html').classList.add(ColorMode.LIGHT);
+      classList.remove(ColorMode.DARK);
+      classList.add(ColorMode.LIGHT);
       setCurrentMode(ColorMode.LIGHT);
     } else {
-      document.querySelector('html').classList.remove(ColorMode.LIGHT);
-      document.querySelector('html').classList.add(ColorMode.DARK);
+      classList.remove(ColorMode.LIGHT);
+      classList.add(ColorMode.DARK);
       setCurrentMode(ColorMode.DARK);
     }
   }, [currentMode]);

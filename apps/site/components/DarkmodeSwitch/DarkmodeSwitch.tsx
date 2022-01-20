@@ -1,5 +1,5 @@
 import { ColorMode } from '@hooks/Darkmode/types';
-import { useDarkmode } from '@hooks/Darkmode/useDarkmode';
+import { useDarkmode } from '@hooks/Darkmode';
 import { FC, useMemo, useState } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
