@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
-
 export function Index() {
-  return <div></div>;
+  return <div>About</div>;
 }
 
 export default Index;

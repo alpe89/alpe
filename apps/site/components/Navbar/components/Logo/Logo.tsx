@@ -32,7 +32,7 @@ export const Logo: FC = () => {
         initial="hidden"
         animate="visible"
         variants={textAnimation}
-        className="text-gray-700 dark:text-slate-100"
+        className="self-center text-5xl font-extrabold mt-0 pt-0"
       >
         {title.split('').map((char, index) => (
           <motion.span
