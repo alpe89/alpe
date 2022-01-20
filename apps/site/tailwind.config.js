@@ -7,7 +7,17 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        blink: 'blink 1s linear infinite alternate',
+      },
+      keyframes: {
+        blink: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
+    },
   },
   plugins: [],
 };
