@@ -1,7 +1,6 @@
-import { FC, useCallback, useMemo } from 'react';
-import Link from 'next/link';
+import { FC, useMemo } from 'react';
+import { NavigationItem } from '../NavigationItem';
 import { NavigationProps } from './types';
-import { useRouter } from 'next/router';
 
 export const Navigation: FC<NavigationProps> = ({ mobile = false }) => {
   const classes = useMemo(
@@ -15,15 +14,15 @@ export const Navigation: FC<NavigationProps> = ({ mobile = false }) => {
   );
   return (
     <>
-      <Link href="/">
-        <a className={classes}>About</a>
-      </Link>
-      <Link href="/blog">
-        <a className={classes}>Blog</a>
-      </Link>
-      <Link href="/demos">
-        <a className={classes}>Demos</a>
-      </Link>
+      <NavigationItem href="/" mobile={mobile}>
+        About
+      </NavigationItem>
+      <NavigationItem href="/blog" mobile={mobile}>
+        Blog
+      </NavigationItem>
+      <NavigationItem href="/demos" mobile={mobile}>
+        Demos
+      </NavigationItem>
     </>
   );
 };
