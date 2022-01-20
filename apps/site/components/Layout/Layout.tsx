@@ -4,7 +4,7 @@ import { LayoutProps } from './types';
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
+    <div className="px-3">
       <Navbar />
       <main>{children}</main>
     </div>

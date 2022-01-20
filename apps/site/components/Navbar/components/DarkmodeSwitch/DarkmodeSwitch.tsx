@@ -21,7 +21,7 @@ export const DarkmodeSwitch: FC = () => {
       onClick={toggleDarkmode}
     >
       <div
-        className={`rounded-full bg-gray-700 dark:bg-slate-100 w-8 h-8 flex justify-center items-center transition-all ease-in-out duration-500 absolute -top-1 ${
+        className={`rounded-full ring-1 hover:ring-orange-600 focus:ring-orange-600 bg-gray-800 dark:bg-slate-100 w-8 h-8 flex justify-center items-center transition-all ease-in-out duration-500 absolute -top-1 ${
           isChecked ? 'translate-x-6' : 'translate-x-0'
         }`}
       >

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 const textAnimation = {
   visible: {
@@ -22,7 +22,7 @@ const charAnimation = {
   hidden: { opacity: 0, y: -100 },
 };
 
-export const Logo: FC = () => {
+export const Logo: FC = memo(() => {
   const title = process.env.NEXT_PUBLIC_APP_TITLE;
   const loopKey = (id: string) => `${new Date().getTime()}-${id}`;
 
@@ -46,6 +46,6 @@ export const Logo: FC = () => {
       </motion.h1>
     </div>
   );
-};
+});
 
 Logo.displayName = 'Logo';
