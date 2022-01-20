@@ -36,7 +36,9 @@ export const Logo: FC = memo(() => {
       >
         {title.split('').map((char, index) => (
           <motion.span
-            className="inline-block"
+            className={`inline-block ${
+              char === '.' ? 'text-orange-500 mx-1' : ''
+            }`}
             key={loopKey(char + index)}
             variants={charAnimation}
           >
